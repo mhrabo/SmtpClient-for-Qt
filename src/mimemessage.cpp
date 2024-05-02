@@ -133,6 +133,11 @@ QString MimeMessage::getSubject() const
     return subject;
 }
 
+const QStringList& MimeMessage::getCustomHeaders() const
+{
+	return customHeaders;
+}
+
 const QList<MimePart*> & MimeMessage::getParts() const
 {
     if (typeid(*content) == typeid(MimeMultiPart)) {
